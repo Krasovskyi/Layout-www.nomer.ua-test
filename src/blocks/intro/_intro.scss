@@ -41,9 +41,7 @@
   }
 
   &__nav {
-    position: absolute;
-    top: 0;
-    left: 0;
+    @extend %pos-absolute-t-l-0;
     width: 100%;
 
     @media (max-width: 960px) {
@@ -93,10 +91,9 @@
 
         a {
           padding: 0 10px;
-          width: 100%;
+          @extend %size-w-h-100;
           font-size: 20px;
           color: black;
-          height: 100%;
           @extend %flex-box-center;
         }
       }
@@ -178,7 +175,6 @@
 
     & form {
       width: 100%;
-
     }
 
     .form-group {

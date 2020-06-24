@@ -21,10 +21,7 @@
 
     & img {
       max-width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      @extend %pos-absolute-t-l-0;
     }
 
     @media (max-width: 1080px) {
@@ -34,7 +31,7 @@
         padding: 0;
         width: 100%;
         & img {
-          position: inherit;
+          position: inherit!important;
         }
       }
     }

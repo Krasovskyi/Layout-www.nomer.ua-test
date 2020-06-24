@@ -1,0 +1,131 @@
+.popup {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100,114,128,0.51);
+  top: 0;
+  left: 0;
+  transition: all 0.8ms ease 0s;
+  &_hidden {
+    display: none;
+  }
+
+  &__body {
+    min-height: 100%;
+    @extend %flex-box-center;
+    padding: 30px 20px;
+  }
+
+  &__content {
+    position: relative;
+    @extend %flex-box-center;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    width: 675px;
+    min-height: 540px;
+    z-index: 2;
+
+    &_congratulations {
+      background-image: url("congratulation.png");
+      background-size: 100% 100%;
+    }
+  }
+
+
+
+  &__title {
+    font-family: 'FiraSans';
+    font-size: 41px;
+    padding: 40px 20px 20px;
+  }
+  &__text {
+    font-family: 'MullerLight';
+    font-size: 22px;
+    padding: 10px 10px 20px;
+  }
+  &__form {
+    width: 100%;
+    padding: 10px 20px;
+    @extend %flex-box-center;
+    flex-direction: column;
+    .form-group {
+      width: 520px;
+      padding-bottom: 20px;
+      @extend %flex-box-center;
+      input {
+        font-family: 'Muller';
+        font-size: 18px;
+        padding: 22px;
+        width: 520px;
+        height: 60px;
+        border: 1px solid #d9d9d9;
+        cursor: pointer;
+      }
+      button {
+        color: white;
+        font-family: 'FiraSans';
+        margin: 30px 0 20px;
+        font-size: 24px;
+        width: 347px;
+        height: 77px;
+        background-color: #ff213b;
+        -webkit-box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.67);
+        -moz-box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.67);
+        box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.67);
+        cursor: pointer;
+        &:hover {
+          background-color:#f80025;
+        }
+      }
+    }
+  }
+  &__close-btn {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+      cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: #333;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &__check-mark {
+    margin: 109px 20px 50px;
+  }
+  &__social-net-logos {
+    @extend %flex-box;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0 40px;
+    & img {
+      padding: 0 10px;
+    }
+  }
+
+}

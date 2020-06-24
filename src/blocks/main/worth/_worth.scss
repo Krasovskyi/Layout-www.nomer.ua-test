@@ -1,0 +1,44 @@
+.worth {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 35px 0;
+
+  &__container {
+    @extend %main__container;
+  }
+
+  &__row {
+    @extend %flex-box-center;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
+  &__row-item {
+    margin: 0 25px;
+
+    @media (max-width: 700px) {
+      margin: 25px 0;
+    }
+  }
+
+
+  &__clarification {
+    margin-top: 10px;
+    padding: 0 5px;
+    font-family: 'Muller';
+
+    p:before {
+      content: "*";
+      color: red;
+      margin-right: 2px;
+    }
+  }
+
+  @media (max-width: 940px) {
+    padding: 25px 0;
+  }
+}

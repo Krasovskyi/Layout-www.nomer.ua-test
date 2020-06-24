@@ -1,0 +1,228 @@
+.intro {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__body {
+    position: absolute;
+    height: calc(100% - 100px);
+    width: 60%;
+
+    top: 100px;
+    left: 0;
+    background-image: url("mercedes_PNG80135-2.jpg");
+    background-size: cover;
+    @media (max-width: 700px) {
+      width: 100%;
+      padding-right: 50px;
+    }
+  }
+
+  &__container {
+    flex-direction: column;
+    position: relative;
+    padding-left: 50px;
+
+    @media (max-width: 960px) {
+      &.active {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 120px;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media (max-width: 960px) {
+      &.active {
+        height: calc(100vh - 100px) !important;
+        width: 100vw;
+        background-image: url("mercedes_PNG80135-2.jpg");
+        background-size: cover;
+        z-index: 3;
+
+        .menu__item {
+          margin: 0;
+        }
+      }
+    }
+
+    .menu {
+      @extend %flex-box-center;
+      justify-content: flex-start !important;
+      font-family: FiraSans;
+      font-size: 20px;
+      width: 100%;
+
+      @media (max-width: 975px) {
+        &.active {
+          display: block !important;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 975px) {
+        display: none !important;
+      }
+
+      &__link_active {
+        background-color: red;
+        color: white !important;
+      }
+
+      &__item {
+        flex: 0 1 150px;
+        margin-right: 30px;
+        height: 120px;
+        cursor: pointer;
+        text-align: center;
+        @extend %flex-box-center;
+
+        a {
+          padding: 0 10px;
+          width: 100%;
+          font-size: 20px;
+          color: black;
+          height: 100%;
+          @extend %flex-box-center;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    z-index: 4;
+
+    &.active {
+      left: 50px;
+    }
+
+    @media (max-width: 975px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after, &:before, & span {
+        content: '';
+        background-color: #710529;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 5px;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    padding: 80px 10px 40px;
+
+    h2 {
+      font-size: 60px;
+
+      span {
+        color: red;
+      }
+    }
+
+    @media (max-width: 400px) {
+      padding: 50px 5px 10px;
+      h2 {
+        font-size: 45px;
+      }
+    }
+  }
+
+  &__text {
+    font-family: MullerLight;
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  &__form {
+    @extend %flex-box-center;
+    height: calc(100% - 100px);
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 40%;
+    background-image: url("4394.jpg");
+    background-size: cover;
+    justify-content: flex-start !important;
+
+    & form {
+      width: 100%;
+
+    }
+
+    .form-group {
+      @extend %flex-box-center;
+      flex-direction: column;
+      margin: 0 0 20px 50px;
+      align-items: flex-start !important;
+
+      label {
+        font-family: FiraSans;
+        letter-spacing: 1px;
+        font-size: 25px;
+        text-align: left;
+        margin-bottom: 17px;
+        color: white;
+
+      }
+
+      input {
+        width: 70%;
+        padding: 15px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+      }
+
+      button {
+        @extend %flex-box-center;
+        width: 50%;
+        height: 75px;
+        background-color: #ff3f2b;
+        padding: 35px;
+        font-size: 25px;
+        color: white;
+
+        &:hover {
+          background-color: #f80025;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      display: none!important;
+    }
+  }
+
+}

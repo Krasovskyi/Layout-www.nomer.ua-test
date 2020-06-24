@@ -1,0 +1,97 @@
+.footer {
+  height: 130px;
+  background-color: #172c42;
+  margin-top: auto;
+  &__container {
+    @extend %flex-box-center;
+    justify-content: space-between !important;
+    height: 100%;
+  }
+
+  &__brand {
+    @extend %flex-box-center;
+    font-family: MullerBlack;
+    font-size: 30px;
+    letter-spacing: 9px;
+    span {
+      color: white;
+    }
+
+    .symbol {
+      position: relative;
+      top: -3px;
+      left: -3px;
+      margin: 0 3px 0 2px;
+      height: 24px;
+      width: 24px;
+      border-radius: 1px;
+      border: 2px solid red;
+      @extend %flex-box-center;
+
+      &__rectangle-hor--invis {
+        display: inline-block;
+        position: absolute;
+        left: -2px;
+        width: 24px;
+        height: 6px;
+        z-index: 1;
+        background-color: #172c42;
+      }
+
+      &__rectangle-ver--invis {
+        display: inline-block;
+        position: absolute;
+        top: -2px;
+        width: 6px;
+        height: 24px;
+        z-index: 1;
+        background-color: #172c42;
+      }
+
+      &__cycle {
+        display: inline-block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: red;
+        z-index: 2;
+      }
+    }
+
+    .brand__logo {
+      @extend %flex-box-center;
+      flex-direction: column;
+      border: 2px solid red;
+      border-radius: 1px;
+      padding: 1px 8px 0;
+      position: relative;
+      top: -2px;
+      span {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+      img {
+        height: 11px;
+        width: 13px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__home-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+    color: white;
+    &:hover {
+      font-size: 1.6rem;
+      transform: scale(1.1);
+    }
+    @media (max-width: 410px) {
+      span:first-child {
+        display: none;
+      }
+    }
+  }
+}

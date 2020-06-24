@@ -1,0 +1,126 @@
+@import "~normalize.css";
+@import "~swiper/swiper";
+@import "blocks/header/header";
+@import "blocks/intro/intro";
+@import "blocks/main/advantages/advantages";
+@import "blocks/main/worth/worth";
+@import "blocks/main/reviews/reviews";
+@import "blocks/footer/footer";
+@import "blocks/cost-card/cost-card";
+@import "blocks/popup/popup";
+@import "lib/styles/hover-min.css";
+
+/*fonts*/
+@font-face {
+  font-family: 'FiraSans';
+  src: url('fonts/FiraSans-Bold.eot');
+  src: local('☺'), url('fonts/FiraSans-Bold.woff') format('woff'), url('fonts/FiraSans-Bold.ttf') format('truetype'), url('fonts/FiraSans-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MullerLight';
+  src: url('fonts/MullerLight.eot');
+  src: local('☺'), url('fonts/MullerLight.woff') format('woff'), url('fonts/MullerLight.ttf') format('truetype'), url('fonts/MullerLight.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('fonts/MullerMedium.eot');
+  src: local('Muller Medium'), local('MullerMedium'),
+  url('fonts/MullerMedium.eot?#iefix') format('embedded-opentype'),
+  url('fonts/MullerMedium.woff2') format('woff2'),
+  url('fonts/MullerMedium.woff') format('woff'),
+  url('fonts/MullerMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MullerBlack';
+  src: url('fonts/MullerBlack.eot');
+  src: local('☺'), url('fonts/MullerBlack.woff') format('woff'), url('fonts/MullerBlack.ttf') format('truetype'), url('fonts/MullerBlack.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*******/
+/*Placeholder Selectors*/
+%flex-box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%flex-box {
+  display: flex;
+}
+%flex-box-column {
+  display: flex;
+  flex-direction: column;
+}
+%main__container {
+  @extend %flex-box-center;
+  flex-direction: column;
+}
+/***********************/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  &, &:before, &:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+ul, ol {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+:focus, :active, a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+/*******/
+
+body {
+  @extend %flex-box-column;
+  min-height: 100vh;
+  font-family: Muller;
+  font-size: 20px;
+}
+.main {
+  width: 100vw;
+}
+.title {
+  font-family: 'FiraSans';
+  font-size: 50px;
+  line-height: 55px;
+  padding-bottom: 70px;
+
+  @media (max-width: 940px) {
+    h2 {
+      font-size: 48px;
+    }
+    @media (max-width: 400px) {
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+.container {
+  max-width: 1495px;
+  margin: 0 auto;
+  padding: 0 50px;
+}

@@ -16,7 +16,7 @@
     "jquery": "^3.5.1",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
-    "swiper": "^5.4.5"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
